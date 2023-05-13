@@ -30,3 +30,5 @@ sed -i '$a uci set system.@system[0].timezone='HKT-8' package/base-files/files/b
 sed -i '$a uci set upnpd.config.enabled='1' package/base-files/files/bin/config_generate
 sed -i '$a uci set ttyd.@ttyd[0].command='/bin/login -f root' package/base-files/files/bin/config_generate
 sed -i '$a uci commit' package/base-files/files/bin/config_generate
+#主题
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
